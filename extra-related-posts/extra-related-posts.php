@@ -1,12 +1,12 @@
-// from wp-content/themes/Extra/includes/template-tags.php around line 1591
-function extra_get_post_related_posts() {
+// placed into child theme functions.php
+function usa_extra_get_post_related_posts() {
 	$post_id = get_the_ID();
 	$terms = get_the_terms( $post_id, 'category' );
 
 	$term_ids = array();
 	if ( is_array( $terms ) ) {
 		foreach ( $terms as $term ) {
-			$term_ids[] = $term->term_id;
+			if ($term->term_id != 33) { $term_ids[] = $term->term_id; } // do not use cat 33 which is giveaways
 		}
 	}
 
