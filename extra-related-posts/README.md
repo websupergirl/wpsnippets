@@ -8,3 +8,5 @@ Future ideas:
 * Create checkbox on categories for client to be able to choose to exclude.
   
 Note: Unfortunately the function isn't pluggable so options are limited in terms of implementation.
+
+Added on 08182019: The related posts are limited to everything after 2017.
